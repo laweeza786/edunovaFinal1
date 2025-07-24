@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Owl Focus App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="styles/focus.css">
+  <style>
+
+  </style>
+</head>
+
+<body>
+      <nav class="navbar  navbar-expand-lg ">
+  <div class="container-fluid navbar-container">
+    <a class="navbar-brand" href="#">
+      <IMG class="img-fluid main-logo" src="pictures/main.jpg">
+        <h1 class="main-heading" onclick="location.href='index.html'">EDUNOVA</h1>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#features-box">FEATURES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="#faculty-box">FACULTY</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about-us-box">ABOUT US</a>
+        </li>
+       
+        
+      </ul>
+     
+      <button class="Btn" onclick="location.href='form.html'">
+        Sign Up
+      </button>
+      <button class="Btn" onclick="location.href='form.html'">
+        Login
+      </button>
+      
+    </div>
+  </div>
+</nav>
+
+  <div class="image-container" onclick="switchImage()">
+    <img id="owlImage1" src="pictures/focus-img2.jpg" class="owl-image visible" />
+    <img id="owlImage2" src="pictures/focus-img1.jpg" class="owl-image hidden" />
+  </div>
+
+  <div class="status-text" id="statusText">You are Distracted Now!</div>
+
+
+  <nav style="
+position:fixed;
+bottom:0px;
+right:0px;
+left:0px;
+height:85px;
+background-color: #353535;
+z-index: 1000;
+display: flex;
+justify-content: space-evenly;
+align-items: center;" class="b-nav-container">
+<div class="icon-box">
+  <i class="bi bi-card-checklist b-nav-icons" onclick="location.href='todo.html'"></i>
+  <p>TODO</p>
+</div>
+<div  class="icon-box">
+  <i class="bi bi-clock-fill b-nav-icons"onclick="location.href='timer.html'"></i>
+  <p>TIMER</p>
+</div>
+<div  class="icon-box">
+  <i class="bi bi-book-half b-nav-icons"onclick="location.href='courses.html'"></i>
+  <p>COURSES</p>
+</div>
+<div  class="icon-box">
+  <i class="bi bi-emoji-angry-fill b-nav-icons"onclick="location.href='focus.html'"></i>
+  <p>FOCUS</p>
+</div>
+<div  class="icon-box">
+  <i class="bi bi-ui-checks b-nav-icons"onclick="location.href='faculty.html'"></i>
+  <p>FACULTY</p>
+</div>
+</nav>
+  <script>
+    let showingFirst = true;
+
+    function switchImage() {
+      const img1 = document.getElementById("owlImage1");
+      const img2 = document.getElementById("owlImage2");
+      const statusText = document.getElementById("statusText");
+
+      statusText.style.opacity = 0;
+
+      setTimeout(() => {
+        if (showingFirst) {
+          img1.classList.remove("visible");
+          img1.classList.add("hidden");
+          img2.classList.remove("hidden");
+          img2.classList.add("visible");
+          statusText.textContent = "You are Focused Now!";
+        } else {
+          img1.classList.remove("hidden");
+          img1.classList.add("visible");
+          img2.classList.remove("visible");
+          img2.classList.add("hidden");
+          statusText.textContent = "You are Distracted Now!";
+        }
+
+        statusText.style.opacity = 1;
+
+        showingFirst = !showingFirst;
+      }, 300);
+    }
+  </script>
+</body>
+</html>

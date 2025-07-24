@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Application - University</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <!-- icons -->
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+       <link rel="stylesheet" href="styles/faculty.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg ">
+  <div class="container-fluid navbar-container">
+    <a class="navbar-brand" href="#">
+      <IMG class="img-fluid main-logo" src="pictures/main.jpg">
+        <h1 class="main-heading"onclick="location.href='index.html'">EDUNOVA</h1>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#features-box">FEATURES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="#faculty-box">FACULTY</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about-us-box">ABOUT US</a>
+        </li>
+       
+        
+      </ul>
+     
+      <button class="Btn" onclick="location.href='form.html'">
+        Sign Up
+      </button>
+      <button class="Btn" onclick="location.href='form.html'">
+        Login
+      </button>
+      
+    </div>
+  </div>
+</nav>
+<nav style="
+position:fixed;
+bottom:0px;
+right:0px;
+left:0px;
+height:90px;
+background-color: #353535;
+z-index: 100;
+display: flex;
+justify-content: space-evenly;
+align-items: center;" class="b-nav-container">
+<div class="icon-box">
+  <i class="bi bi-card-checklist b-nav-icons" onclick="location.href='todo.html'"></i>
+  <p>TODO</p>
+</div>
+<div class="icon-box">
+  <i class="bi bi-clock-fill b-nav-icons"onclick="location.href='timer.html'"></i>
+  <p>TIMER</p>
+</div>
+<div class="icon-box">
+  <i class="bi bi-book-half b-nav-icons"onclick="location.href='courses.html'"></i>
+  <p>COURSES</p>
+</div>
+<div class="icon-box">
+  <i class="bi bi-emoji-angry-fill b-nav-icons" onclick="location.href='focus.html'"></i>
+  <p>FOCUS</p>
+</div>
+<div class="icon-box">
+  <i class="bi bi-ui-checks b-nav-icons"onclick="location.href='faculty.html'"></i>
+  <p>FACULTY</p>
+</div>
+</nav>
+
+    <!-- University Header -->
+    <div class="university-header text-center">
+        <div class="container"style="margin-top:120px">
+            <img src="pictures/main.jpg" alt="University Logo" style="height:200px;" class="img-fluid mb-3">
+            <B><h1 STYLE="font-weight: 700;">FACULTY APPLICATION</h1></B>
+            <p class="lead">Join our academic community and contribute to excellence in education and research</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- Application Progress -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <ul class="nav nav-pills justify-content-center" id="application-steps">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#personal-info" data-bs-toggle="pill">Personal Info</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education" data-bs-toggle="pill">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience" data-bs-toggle="pill">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#documents" data-bs-toggle="pill">Documents</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Application Form -->
+<div class="row">
+        <div class="col-12">
+                <div class="application-container">
+                    <div class="tab-content">
+                        <!-- Personal Information Section -->
+                        <div class="tab-pane fade show active" id="personal-info">
+                            <form id="personalInfoForm">
+                                <div class="form-section">
+                                    <h3><i class="fas fa-user me-2"></i>Basic Information</h3>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="firstName" class="form-label required-field">First Name</label>
+                                            <input type="text" class="form-control" id="firstName" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="lastName" class="form-label required-field">Last Name</label>
+                                            <input type="text" class="form-control" id="lastName" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="email" class="form-label required-field">Email Address</label>
+                                            <input type="email" class="form-control" id="email" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="phone" class="form-label required-field">Phone Number</label>
+                                            <input type="tel" class="form-control" id="phone" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="dob" class="form-label">Date of Birth</label>
+                                            <input type="date" class="form-control" id="dob">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="gender" class="form-label">Gender</label>
+                                            <select class="form-select" id="gender">
+                                                <option value="">Select Gender</option>
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
+                                                <option value="other">Other</option>
+                                                <option value="prefer-not-to-say">Prefer not to say</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-section">
+                                    <h3><i class="fas fa-map-marker-alt me-2"></i>Address Information</h3>
+                                    <div class="mb-3">
+                                        <label for="street" class="form-label">Street Address</label>
+                                        <input type="text" class="form-control" id="street">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="city" class="form-label">City</label>
+                                            <input type="text" class="form-control" id="city">
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <label for="state" class="form-label">State/Province</label>
+                                            <input type="text" class="form-control" id="state">
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <label for="zip" class="form-label">Postal Code</label>
+                                            <input type="text" class="form-control" id="zip">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="country" class="form-label">Country</label>
+                                        <select class="form-select" id="country">
+                                            <option value="">Select Country</option>
+                                            <option value="US">United States</option>
+                                            <option value="CA">Canada</option>
+                                            <option value="UK">United Kingdom</option>
+                                            <!-- More countries would be added here -->
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-section">
+                                    <h3><i class="fas fa-briefcase me-2"></i>Position Information</h3>
+                                    <div class="mb-3">
+                                        <label for="position" class="form-label required-field">Position Applied For</label>
+                                        <select class="form-select" id="position" required>
+                                            <option value="">Select Position</option>
+                                            <option value="professor">Professor</option>
+                                            <option value="associate-professor">Associate Professor</option>
+                                            <option value="assistant-professor">Assistant Professor</option>
+                                            <option value="lecturer">Lecturer</option>
+                                            <option value="adjunct">Adjunct Faculty</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="department" class="form-label required-field">Department</label>
+                                        <select class="form-select" id="department" required>
+                                            <option value="">Select Department</option>
+                                            <option value="computer-science">Computer Science</option>
+                                            <option value="engineering">Engineering</option>
+                                            <option value="business">Business Administration</option>
+                                            <option value="science">Natural Sciences</option>
+                                            <option value="arts">Arts and Humanities</option>
+                                            <option value="social-sciences">Social Sciences</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="specialization" class="form-label">Area of Specialization</label>
+                                        <input type="text" class="form-control" id="specialization">
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between mt-4">
+                                    <button type="button" class="btn btn-secondary" disabled>Previous</button>
+                                    <button type="button" class="btn btn-primary next-step" data-target="#education">Next: Education</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <!-- Education Section -->
+                        <div class="tab-pane fade" id="education">
+                            <form id="educationForm">
+                                <div class="form-section">
+                                    <h3><i class="fas fa-graduation-cap me-2"></i>Education History</h3>
+                                    <div id="education-container">
+                                        <!-- Education items will be added here -->
+                                        <div class="education-item">
+                                            <div class="row">
+                                                <div class="col-md-4 mb-3">
+                                                    <label class="form-label required-field">Degree Level</label>
+                                                    <select class="form-select degree-level" required>
+                                                        <option value="">Select Degree</option>
+                                                        <option value="phd">PhD</option>
+                                                        <option value="masters">Master's</option>
+                                                        <option value="bachelors">Bachelor's</option>
+                                                        <option value="associate">Associate</option>
+                                                        <option value="diploma">Diploma</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-8 mb-3">
+                                                    <label class="form-label required-field">Degree Title</label>
+                                                    <input type="text" class="form-control degree-title" required>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label required-field">Institution</label>
+                                                    <input type="text" class="form-control institution" required>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label">Field of Study</label>
+                                                    <input type="text" class="form-control field-of-study">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label">Graduation Year</label>
+                                                    <input type="number" class="form-control graduation-year" min="1900" max="2099">
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label">Country</label>
+                                                    <select class="form-select country">
+                                                        <option value="">Select Country</option>
+                                                        <option value="US">United States</option>
+                                                        <option value="CA">Canada</option>
+                                                        <option value="UK">United Kingdom</option>
+                                                        <!-- More countries would be added here -->
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-outline-primary add-item-btn" id="add-education">
+                                        <i class="fas fa-plus me-2"></i>Add Another Degree
+                                    </button>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between mt-4">
+                                    <button type="button" class="btn btn-secondary prev-step" data-target="#personal-info">Previous</button>
+                                    <button type="button" class="btn btn-primary next-step" data-target="#experience">Next: Experience</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <!-- Experience Section -->
+                        <div class="tab-pane fade" id="experience">
+                            <form id="experienceForm">
+                                <div class="form-section">
+                                    <h3><i class="fas fa-briefcase me-2"></i>Teaching Experience</h3>
+                                    <div id="teaching-container">
+                                        <!-- Teaching experience items will be added here -->
+                                        <div class="employment-item">
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label required-field">Institution</label>
+                                                    <input type="text" class="form-control institution" required>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label required-field">Position</label>
+                                                    <input type="text" class="form-control position" required>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label">Start Date</label>
+                                                    <input type="date" class="form-control start-date">
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label">End Date</label>
+                                                    <input type="date" class="form-control end-date">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Description</label>
+                                                <textarea class="form-control description" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-outline-primary add-item-btn" id="add-teaching">
+                                        <i class="fas fa-plus me-2"></i>Add Another Teaching Position
+                                    </button>
+                                </div>
+                                
+                                <div class="form-section">
+                                    <h3><i class="fas fa-flask me-2"></i>Research Experience</h3>
+                                    <div id="research-container">
+                                        <!-- Research experience items will be added here -->
+                                        <div class="employment-item">
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label">Organization</label>
+                                                    <input type="text" class="form-control organization">
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label">Role</label>
+                                                    <input type="text" class="form-control role">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label">Start Date</label>
+                                                    <input type="date" class="form-control start-date">
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label">End Date</label>
+                                                    <input type="date" class="form-control end-date">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Description</label>
+                                                <textarea class="form-control description" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-outline-primary add-item-btn" id="add-research">
+                                        <i class="fas fa-plus me-2"></i>Add Another Research Position
+                                    </button>
+                                </div>
+                                
+                                <div class="form-section">
+                                    <h3><i class="fas fa-book me-2"></i>Publications</h3>
+                                    <div id="publications-container">
+                                        <!-- Publication items will be added here -->
+                                        <div class="publication-item">
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label">Title</label>
+                                                    <input type="text" class="form-control title">
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label">Type</label>
+                                                    <select class="form-select type">
+                                                        <option value="">Select Publication Type</option>
+                                                        <option value="journal">Journal Article</option>
+                                                        <option value="conference">Conference Paper</option>
+                                                        <option value="book">Book</option>
+                                                        <option value="chapter">Book Chapter</option>
+                                                        <option value="other">Other</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label">Publication Date</label>
+                                                    <input type="date" class="form-control publication-date">
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label">Publisher</label>
+                                                    <input type="text" class="form-control publisher">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Description</label>
+                                                <textarea class="form-control description" rows="2"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-outline-primary add-item-btn" id="add-publication">
+                                        <i class="fas fa-plus me-2"></i>Add Another Publication
+                                    </button>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between mt-4">
+                                    <button type="button" class="btn btn-secondary prev-step" data-target="#education">Previous</button>
+                                    <button type="button" class="btn btn-primary next-step" data-target="#documents">Next: Documents</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <!-- Documents Section -->
+                        <div class="tab-pane fade" id="documents">
+                            <form id="documentsForm">
+                                <div class="form-section">
+                                    <h3><i class="fas fa-file-alt me-2"></i>Required Documents</h3>
+                                    
+                                    <div class="mb-3">
+                                        <label for="cv" class="form-label required-field">Curriculum Vitae (CV)</label>
+                                        <input type="file" class="form-control" id="cv" required>
+                                        <small class="text-muted">Please upload your updated CV in PDF format (Max 5MB)</small>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="research-statement" class="form-label">Research Statement</label>
+                                        <input type="file" class="form-control" id="research-statement">
+                                        <small class="text-muted">Describe your research interests and future directions (PDF, Max 2MB)</small>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="teaching-statement" class="form-label">Teaching Statement</label>
+                                        <input type="file" class="form-control" id="teaching-statement">
+                                        <small class="text-muted">Describe your teaching philosophy and approaches (PDF, Max 2MB)</small>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="transcripts" class="form-label">Unofficial Transcripts</label>
+                                        <input type="file" class="form-control" id="transcripts">
+                                        <small class="text-muted">You may upload unofficial copies for application (Max 5MB total)</small>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="references" class="form-label">Reference Letters (optional)</label>
+                                        <input type="file" class="form-control" id="references" multiple>
+                                        <small class="text-muted">You may upload up to 3 reference letters (PDF, Max 2MB each)</small>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="additional-files" class="form-label">Additional Supporting Documents</label>
+                                        <input type="file" class="form-control" id="additional-files" multiple>
+                                        <small class="text-muted">Any other documents you think would support your application (Max 10MB total)</small>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-section">
+                                    <h3><i class="fas fa-clipboard-check me-2"></i>Review and Submit</h3>
+                                    
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="confirmation" required>
+                                        <label class="form-check-label required-field" for="confirmation">I certify that all information provided is accurate and complete to the best of my knowledge.</label>
+                                    </div>
+                                    
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="terms" required>
+                                        <label class="form-check-label required-field" for="terms">I agree to the university's terms and conditions of employment.</label>
+                                    </div>
+                                    
+                                    <div class="alert alert-info">
+                                        <i class="fas fa-info-circle me-2"></i>After submission, you will receive a confirmation email with your application details. The review process typically takes 4-6 weeks.
+                                    </div>
+                                    
+                                    <div class="preview-card">
+                                        <div class="preview-header">
+                                            <h4 class="mb-0">Application Preview</h4>
+                                        </div>
+                                        <div id="application-preview">
+                                            <p class="text-muted">Complete the previous sections to see a preview of your application.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between mt-4">
+                                    <button type="button" class="btn btn-secondary prev-step" data-target="#experience">Previous</button>
+                                    <button type="submit" class="btn btn-success" id="submit-application">
+                                        <i class="fas fa-paper-plane me-2"></i>Submit Application
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="text-center py-4 text-muted" ">
+            <p style="color:white;padding-bottom:20px;">© 2025 Edunova. All rights reserved.</p>
+            <p style="color:white;padding-bottom: 20px;">Questions? Contact <a href="mailto:faculty-recruitment@university.edu">faculty-recruitment@edunova.com</a></p>
+             <i>
+                <p style="color:rgb(255, 174, 239);padding-bottom:100px;">Made by Laweeza Shamim & Nida Afreen</p>
+             </i>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab navigation
+            const nextButtons = document.querySelectorAll('.next-step');
+            const prevButtons = document.querySelectorAll('.prev-step');
+            const tabs = document.getElementById('application-steps').querySelectorAll('.nav-link');
+            
+            nextButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const target = this.getAttribute('data-target');
+                    updateProgressBar(target);
+                    bootstrap.Tab.getOrCreateInstance(document.querySelector(target)).show();
+                });
+            });
+            
+            prevButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const target = this.getAttribute('data-target');
+                    updateProgressBar(target, true);
+                    bootstrap.Tab.getOrCreateInstance(document.querySelector(target)).show();
+                });
+            });
+            
+            function updateProgressBar(target, isPrev = false) {
+                const progressBar = document.querySelector('.progress-bar');
+                let progress = 25;
+                
+                switch(target) {
+                    case '#education':
+                        progress = isPrev ? 25 : 50;
+                        break;
+                    case '#experience':
+                        progress = isPrev ? 50 : 75;
+                        break;
+                    case '#documents':
+                        progress = 100;
+                        break;
+                }
+                
+                progressBar.style.width = progress + '%';
+                progressBar.setAttribute('aria-valuenow', progress);
+                
+                // Update active tab state
+                tabs.forEach(tab => {
+                    tab.classList.remove('active');
+                    if (tab.getAttribute('href') === target) {
+                        tab.classList.add('active');
+                    }
+                });
+            }
+            
+            // Add more education items
+            document.getElementById('add-education').addEventListener('click', function() {
+                const container = document.getElementById('education-container');
+                const newItem = container.querySelector('.education-item').cloneNode(true);
+                
+                // Clear input values
+                newItem.querySelectorAll('input').forEach(input => {
+                    input.value = '';
+                });
+                newItem.querySelectorAll('select').forEach(select => {
+                    select.value = '';
+                });
+                
+                // Add remove button
+                const removeBtn = document.createElement('button');
+                removeBtn.className = 'btn btn-outline-danger btn-sm remove-btn';
+                removeBtn.innerHTML = '<i class="fas fa-trash me-1"></i>Remove';
+                removeBtn.addEventListener('click', function() {
+                    if (container.querySelectorAll('.education-item').length > 1) {
+                        container.removeChild(newItem);
+                    } else {
+                        alert('You must have at least one education entry.');
+                    }
+                });
+                
+                newItem.appendChild(removeBtn);
+                container.appendChild(newItem);
+            });
+            
+            // Add more teaching experience items
+            document.getElementById('add-teaching').addEventListener('click', function() {
+                const container = document.getElementById('teaching-container');
+                const newItem = container.querySelector('.employment-item').cloneNode(true);
+                
+                // Clear input values
+                newItem.querySelectorAll('input').forEach(input => {
+                    input.value = '';
+                });
+                
+                // Add remove button
+                const removeBtn = document.createElement('button');
+                removeBtn.className = 'btn btn-outline-danger btn-sm remove-btn';
+                removeBtn.innerHTML = '<i class="fas fa-trash me-1"></i>Remove';
+                removeBtn.addEventListener('click', function() {
+                    if (container.querySelectorAll('.employment-item').length > 1) {
+                        container.removeChild(newItem);
+                    } else {
+                        alert('You must have at least one teaching experience entry.');
+                    }
+                });
+                
+                newItem.appendChild(removeBtn);
+                container.appendChild(newItem);
+            });
+            
+            // Add more research experience items
+            document.getElementById('add-research').addEventListener('click', function() {
+                const container = document.getElementById('research-container');
+                const newItem = container.querySelector('.employment-item').cloneNode(true);
+                
+                // Clear input values
+                newItem.querySelectorAll('input').forEach(input => {
+                    input.value = '';
+                });
+                
+                // Add remove button
+                const removeBtn = document.createElement('button');
+                removeBtn.className = 'btn btn-outline-danger btn-sm remove-btn';
+                removeBtn.innerHTML = '<i class="fas fa-trash me-1"></i>Remove';
+                removeBtn.addEventListener('click', function() {
+                    container.removeChild(newItem);
+                });
+                
+                newItem.appendChild(removeBtn);
+                container.appendChild(newItem);
+            });
+            
+            // Add more publication items
+            document.getElementById('add-publication').addEventListener('click', function() {
+                const container = document.getElementById('publications-container');
+                const newItem = container.querySelector('.publication-item').cloneNode(true);
+                
+                // Clear input values
+                newItem.querySelectorAll('input').forEach(input => {
+                    input.value = '';
+                });
+                newItem.querySelectorAll('select').forEach(select => {
+                    select.value = '';
+                });
+                
+                // Add remove button
+                const removeBtn = document.createElement('button');
+                removeBtn.className = 'btn btn-outline-danger btn-sm remove-btn';
+                removeBtn.innerHTML = '<i class="fas fa-trash me-1"></i>Remove';
+                removeBtn.addEventListener('click', function() {
+                    container.removeChild(newItem);
+                });
+                
+                newItem.appendChild(removeBtn);
+                container.appendChild(newItem);
+            });
+            
+            // Form validation for personal info
+            document.getElementById('personalInfoForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Validation logic would go here
+                alert('Personal information validated successfully!');
+            });
+            
+            // Form submission
+            document.getElementById('submit-application').addEventListener('click', function() {
+                // Validate all forms first
+                const forms = [
+                    document.getElementById('personalInfoForm'),
+                    document.getElementById('educationForm'),
+                    document.getElementById('experienceForm'),
+                    document.getElementById('documentsForm')
+                ];
+                
+                let isValid = true;
+                forms.forEach(form => {
+                    if (!form.checkValidity()) {
+                        form.reportValidity();
+                        isValid = false;
+                    }
+                });
+                
+                if (isValid) {
+                    alert('Application submitted successfully! Thank you for your interest in joining our faculty.');
+                    // Here you would typically send the form data to the server
+                }
+            });
+            
+            // Preview functionality would be added here
+            // It would collect data from all forms and display a summary
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- linking css -->
+     <link rel="stylesheet" href="styles/timer.css">
+     <!-- poppins -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <!-- icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  </head>
+  <body>
+      <nav class="navbar  navbar-expand-lg ">
+  <div class="container-fluid navbar-container">
+    <a class="navbar-brand" href="#">
+      <IMG class="img-fluid main-logo" src="pictures/main.jpg">
+        <h1 class="main-heading"onclick="location.href='index.html'">EDUNOVA</h1>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#features-box">FEATURES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="#faculty-box">FACULTY</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about-us-box">ABOUT US</a>
+        </li>
+       
+        
+      </ul>
+     
+      <button class="Btn" onclick="location.href='form.html'">
+        Sign Up
+      </button>
+      <button class="Btn" onclick="location.href='form.html'">
+        Login
+      </button>
+      
+    </div>
+  </div>
+</nav>
+<nav style="
+position:fixed;
+bottom:0px;
+right:0px;
+left:0px;
+height:90px;
+background-color: #353535;
+z-index: 100;
+display: flex;
+justify-content:space-evenly;
+align-items: center;" class="b-nav-container">
+<div class="icon-box">
+  <i class="bi bi-card-checklist b-nav-icons" onclick="location.href='todo.html'"></i>
+  <p>TODO</p>
+</div>
+<div class="icon-box">
+  <i class="bi bi-clock-fill b-nav-icons"onclick="location.href='timer.html'"></i>
+  <p>TIMER</p>
+</div>
+<div class="icon-box">
+  <i class="bi bi-book-half b-nav-icons"onclick="location.href='courses.html'"></i>
+  <p>COURSES</p>
+</div>
+<div class="icon-box">
+  <i class="bi bi-emoji-angry-fill b-nav-icons"onclick="location.href='focus.html'"></i>
+  <p>FOCUS</p>
+</div>
+<div class="icon-box">
+  <i class="bi bi-ui-checks b-nav-icons"onclick="location.href='faculty.html'"></i>
+  <p>FACULTY</p>
+</div>
+</nav>
+    <div class="timer-box-container container-fluid">
+      <div class="timer-container">
+        <h1 style="font-size: 40px;
+        position: relative;
+        top:20px">Timer</h1>
+        <div class="timer-display">
+            <svg class="progress-circle" width="100%" height="100%" viewBox="0 0 100 100">
+                <circle class="progress-circle-back" cx="50" cy="50" r="40" />
+                <circle class="progress-circle-front" cx="50" cy="50" r="40" />
+            </svg>
+            <div class="time">
+                <span id="minutes">00</span>:<span id="seconds" class="time-seconds">00</span>
+            </div>
+        </div>
+        <div class="controls">
+            <button class="start-btn button1" id="startBtn">Start</button>
+            <button class="pause-btn button1" id="pauseBtn">Pause</button>
+            <button class="reset-btn button1" id="resetBtn">Reset</button>
+        </div>
+    </div>
+    </div>
+    <script src="javascript/timer.js"></script>
+  </body>
+</html>
